@@ -1,0 +1,19 @@
+{
+  "name": "back2roots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "author": "Andreas Sander <mail@andi1984.de>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-replace-link": "^1.0.1",
+    "twig": "^1.14.0"
+  }
+}
