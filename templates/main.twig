@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
-        <title>{{ page_title }}</title>
+        <title>{{ title }}</title>
         <meta charset="utf-8"/>
     </head>
     <body>
-        {{ content }}
+        <main>
+            {{ content }}
+        </main>
+        {% block after_content %}{% endblock %}
     </body>
 </html>

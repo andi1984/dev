@@ -13,6 +13,7 @@
   "dependencies": {
     "html-minifier": "^4.0.0",
     "markdown-it": "^10.0.0",
+    "markdown-it-front-matter": "^0.1.2",
     "markdown-it-replace-link": "^1.0.1",
     "twig": "^1.14.0"
   }
