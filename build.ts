@@ -1,3 +1,5 @@
+export { };
+  
 const fs = require("fs");
 const MARKDOWN_FOLDER = require("./utils/constants").MARKDOWN_FOLDER;
 const renderMarkdownFile = require("./utils/renderMDFile");

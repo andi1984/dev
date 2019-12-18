@@ -1,3 +1,6 @@
+// https://stackoverflow.com/a/41975448/778340
+export { };
+  
 /**
  * Returns frontmatter lines array based on given frontmatter string
  * @param {string} frontmatterString

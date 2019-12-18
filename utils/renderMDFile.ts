@@ -1,3 +1,6 @@
+// https://stackoverflow.com/a/41975448/778340
+export {};
+
 const path = require("path");
 const fs = require("fs");
 
@@ -6,9 +9,9 @@ const Twig = require("twig");
 const isAbsoluteURL = require("./url").isAbsoluteURL;
 const frontmatterUtils = require("./frontmatter");
 const MarkdownIt = require("markdown-it"),
-  md = frontmatterCallback =>
+  md = (frontmatterCallback: Function) =>
     new MarkdownIt({
-      replaceLink: function(link) {
+      replaceLink: function(link: string): string {
         return isAbsoluteURL(link) || link.indexOf(".html") !== -1
           ? link
           : `${link}.html`;
@@ -21,7 +24,7 @@ const MARKDOWN_FOLDER = require("./constants").MARKDOWN_FOLDER;
 const DISTRIBUTION_FOLDER = require("./constants").DISTRIBUTION_FOLDER;
 const TEMPLATE_FOLDER = require("./constants").TEMPLATE_FOLDER;
 
-module.exports = file => {
+module.exports = (file: string) => {
   const fileName = path.basename(file, ".md");
 
   // Set default template to render
@@ -32,7 +35,7 @@ module.exports = file => {
 
   // Read in MD file synchronously.
   const mdString = fs.readFileSync(path.join(MARKDOWN_FOLDER, file), "utf8");
-  const htmlOutput = md(frontmatter => {
+  const htmlOutput = md((frontmatter: string): void => {
     /* HANDLE TEMPLATE FRONTMATTER */
     const templateFrontmatter = frontmatterUtils.findFrontmatterTag(
       frontmatter,
@@ -72,7 +75,7 @@ module.exports = file => {
       title,
       content: htmlOutput
     },
-    (err, html) => {
+    (err: Error, html: string) => {
       return new Promise((resolve, reject) => {
         if (err) {
           reject(err);
@@ -81,7 +84,7 @@ module.exports = file => {
         fs.writeFile(
           path.join(DISTRIBUTION_FOLDER, `${fileName}.html`),
           minify(html, { collapseWhitespace: true }),
-          writeErr => {
+          (writeErr: Error) => {
             if (writeErr) {
               reject(writeErr);
             } else {
