@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./build.ts",
-    "prod": "tsc && node ./build/build.js"
+    "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
+    "start": "tsc && node ./build/build.js"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
   "license": "MIT",
