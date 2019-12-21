@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "prod": "tsc && node ./build/build.js"
