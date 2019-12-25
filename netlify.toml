@@ -26,7 +26,7 @@
 
 [[redirects]]
   from = "/*.html"
-  to = "/*.html"
+  to = "/:splat"
 
 # A basic redirect rule
 [[redirects]]
