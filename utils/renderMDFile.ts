@@ -1,5 +1,3 @@
-import { write } from "fs";
-
 // https://stackoverflow.com/a/41975448/778340
 export {};
 
@@ -10,11 +8,16 @@ const minify = require("html-minifier").minify;
 const Twig = require("twig");
 const isAbsoluteURL = require("./url").isAbsoluteURL;
 const frontmatterUtils = require("./frontmatter");
+
+const supportForPrettyUrls = Boolean(process.env.PRETTY_URLS);
+console.log('Support for pretty URLs', supportForPrettyUrls);
 const MarkdownIt = require("markdown-it"),
   md = (frontmatterCallback: Function) =>
     new MarkdownIt({
       replaceLink: function(link: string): string {
-        return isAbsoluteURL(link) || link.indexOf(".html") !== -1
+        return Boolean(process.env.PRETTY_URLS) ||
+          isAbsoluteURL(link) ||
+          link.indexOf(".html") !== -1
           ? link
           : `${link}.html`;
       }

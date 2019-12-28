@@ -1,5 +1,5 @@
 export {};
-
+require("dotenv").config();
 const fs = require("fs");
 const { resolve } = require("path");
 const { readdir } = require("fs").promises;
