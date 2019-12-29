@@ -1,30 +1,25 @@
+// https://stackoverflow.com/a/41975448/778340
 export {};
+
 require("dotenv").config();
-const { resolve } = require("path");
-const { readdir } = require("fs").promises;
 const { sync: syncRmRf } = require("rimraf");
 const MARKDOWN_FOLDER = require("./utils/constants").MARKDOWN_FOLDER;
 const DISTRIBUTION_FOLDER = require("./utils/constants").DISTRIBUTION_FOLDER;
 const renderMarkdownFile = require("./utils/renderMDFile");
-
-async function* getFiles(dir: string): AsyncGenerator<string> {
-  const dirents = await readdir(dir, { withFileTypes: true });
-  for (const dirent of dirents) {
-    const res = resolve(dir, dirent.name);
-    if (dirent.isDirectory()) {
-      yield* getFiles(res);
-    } else {
-      yield res;
-    }
-  }
-}
+const { getFiles } = require("./utils/generators");
+const { getSiteObject } = require("./utils/md");
 
 // Step 1: Clear output directory
 syncRmRf(DISTRIBUTION_FOLDER);
 
 // Step 2: Create files
 (async () => {
+  let sites = [];
   for await (const f of getFiles(MARKDOWN_FOLDER)) {
-    renderMarkdownFile(f);
+    sites.push(getSiteObject(f));
+  }
+
+  for (const site of sites) {
+    renderMarkdownFile(site, sites);
   }
 })();
