@@ -1,3 +1,4 @@
+import { URL } from "url";
 const path = require("path");
 const fs = require("fs");
 
@@ -17,7 +18,7 @@ export interface Site {
   template: String;
   html: String;
   file: File;
-  url: String;
+  url: URL;
 }
 
 const MarkdownIt = require("markdown-it"),
