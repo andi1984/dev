@@ -7,6 +7,9 @@
     <body>
         <main>
             {{ content }}
+            {% for site in sites %}
+                <li><a href="{{site.url.href}}">{{site.title}}</a></li>
+            {% endfor %}
         </main>
         {% block after_content %}{% endblock %}
     </body>
