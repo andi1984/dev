@@ -1,6 +1,9 @@
+---
+template: landing.twig
+title: Hello world!
+---
 # Hello world
 
-* [foo article](foo)
-* [bar article](bar)
+## This is a h2
 
-[index article](subfolder/index)
+> Zitat
