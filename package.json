@@ -11,7 +11,12 @@
     "tsc": "tsc",
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
-    "assets": "echo \"Run your asset generation script here putting assets into the dist folder\" && exit 1",
+    "watch-assets-css": "parcel watch assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
+    "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
+    "watch-assets-js": "parcel watch assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
+    "assets-js": "parcel build assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
+    "watch-assets": "npm run watch-assets-css && npm run watch-assets-js",
+    "assets": "npm run assets-css && npm run assets-js",
     "start": "npm run build && npm run assets"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
@@ -33,6 +38,7 @@
   },
   "devDependencies": {
     "jest": "^24.9.0",
+    "parcel": "^1.12.4",
     "ts-jest": "^24.2.0"
   }
 }
