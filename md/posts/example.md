@@ -2,8 +2,19 @@
 title: My Blogpost
 template: blogpost.twig
 ---
+
 ## This is my example blogpost.
 
-Lorem ipsum dolor… asdasas
+How are you?
 
-How are you? asas asass How arasas asas asas asas
+```css
+h1 {
+  font-weight: bold;
+}
+```
+
+```jsx
+<Foo>
+{a && <Bar />}
+</Foo>
+```

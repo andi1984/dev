@@ -1,3 +1,5 @@
+@import "./prism.css";
+
 @font-face {
   font-family: "etc-grandstander";
 
@@ -6,12 +8,12 @@
 
   font-display: swap;
 
-  font-weight: 100 200;
+  font-weight: 100 900;
 
   text-rendering: optimizeLegibility;
 }
 
-* {
+h1, h2, h3, h4, h5, h6 {
   font-family: etc-grandstander, sans-serif;
 }
 

@@ -8,7 +8,10 @@
   },
   "watch": {
     "start": {
-      "patterns": ["templates", "md"],
+      "patterns": [
+        "templates",
+        "md"
+      ],
       "extensions": "twig,md"
     }
   },
@@ -22,7 +25,7 @@
     "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "watch-assets-js": "parcel watch assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
     "assets-js": "parcel build assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
-    "watch-assets": "npm run watch-assets-css && npm run watch-assets-js",
+    "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
     "assets": "npm run assets-css && npm run assets-js",
     "start": "npm run build && npm run assets"
   },
@@ -41,12 +44,15 @@
     "markdown-it-replace-link": "^1.0.1",
     "npm-watch": "^0.6.0",
     "postcss": "^7.0.26",
+    "postcss-import": "^12.0.1",
     "rimraf": "^3.0.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "twig": "^1.14.0",
     "typescript": "^3.7.3"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concurrently": "^5.0.2",
     "jest": "^24.9.0",
     "parcel": "^1.12.4",
     "ts-jest": "^24.2.0"
