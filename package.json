@@ -6,9 +6,16 @@
   "engines": {
     "node": ">=12.14.0"
   },
+   "watch": {
+    "start": {
+      "patterns": ["templates", "md"],
+      "extensions": "twig,md"
+    }
+  },
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
+    "watch-content": "npm-watch",
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
     "assets": "echo \"Run your asset generation script here putting assets into the dist folder\" && exit 1",
@@ -33,6 +40,7 @@
   },
   "devDependencies": {
     "jest": "^24.9.0",
+    "npm-watch": "^0.6.0",
     "ts-jest": "^24.2.0"
   }
 }
