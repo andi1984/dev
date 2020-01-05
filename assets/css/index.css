@@ -14,3 +14,7 @@
 * {
   font-family: etc-grandstander, sans-serif;
 }
+
+button {
+  appearance: none;
+}
