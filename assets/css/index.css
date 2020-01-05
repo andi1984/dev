@@ -1,10 +1,18 @@
-body {
-  background: green;
-  font-size: 19px;
+@font-face {
+  font-family: "etc-grandstander";
+
+  src: url(ETCGrandstanderVariable.woff2) format("woff2-variations"),
+    url(ETCGrandstander-Medium.woff2) format("woff2");
+
+  font-display: swap;
+
+  font-weight: 100 200;
+
+  text-rendering: optimizeLegibility;
 }
 
-h1 {
-  font-size: 1rem;
+* {
+  font-family: etc-grandstander, sans-serif;
 }
 
 button {

@@ -6,10 +6,17 @@
   "engines": {
     "node": ">=12.14.0"
   },
+  "watch": {
+    "start": {
+      "patterns": ["templates", "md"],
+      "extensions": "twig,md"
+    }
+  },
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
-    "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
+    "watch-content": "npm-watch",
+    "watch-build": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
     "watch-assets-css": "parcel watch assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
@@ -32,6 +39,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-front-matter": "^0.1.2",
     "markdown-it-replace-link": "^1.0.1",
+    "npm-watch": "^0.6.0",
     "postcss": "^7.0.26",
     "rimraf": "^3.0.0",
     "ts-node-dev": "^1.0.0-pre.44",
