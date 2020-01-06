@@ -13,6 +13,20 @@ async function* getFiles(dir: string): AsyncGenerator<string> {
   }
 }
 
+// Only pass along events that meet a condition
+// cf. https://gist.github.com/andi1984/45d789ab6f77d4c7c0817becb3d95888
+async function* filter(
+  stream: AsyncGenerator,
+  test: (event: any) => boolean
+): AsyncGenerator {
+  for await (var event of stream) {
+    if (test(event)) {
+      yield event;
+    }
+  }
+}
+
 module.exports = {
-  getFiles
+  getFiles,
+  filter
 };
