@@ -45,6 +45,7 @@
     "postcss": "^7.0.26",
     "postcss-import": "^12.0.1",
     "rimraf": "^3.0.0",
+    "rss": "^1.2.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "twig": "^1.14.0",
     "typescript": "^3.7.3"
