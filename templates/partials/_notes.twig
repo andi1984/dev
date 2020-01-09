@@ -1,0 +1,10 @@
+<ol class="cards">
+{% for site in sites %}
+    {% if 'notes/' in site.url.pathname %}
+        <li class="card">
+            <a class="card__header" href="{{site.url}}">{{site.title}}</a>
+            <details class="card__content">{{site.html|striptags}}</details>
+        </li>
+    {% endif %}
+{% endfor %}
+</ol>

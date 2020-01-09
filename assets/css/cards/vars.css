@@ -1,0 +1,5 @@
+:root {
+  --cards-box-shadow: var(--gray-chateau);
+  --cards-bgcolor: var(--cape-cod);
+  --cards-color: var(--ebb);
+}

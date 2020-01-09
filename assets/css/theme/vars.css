@@ -1,0 +1,7 @@
+:root {
+  --dark-bg: var(--cape-cod);
+  --dark-color: var(--ebb);
+
+  --light-bg: var(--ebb);
+  --light-color: var(--cape-cod);
+}

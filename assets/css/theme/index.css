@@ -1,0 +1,16 @@
+@import "./vars.css";
+
+html,
+body {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* CSS Code wenn Dark Mode aktiv */
+  html,
+  body {
+    background-color: var(--dark-bg);
+    color: var(--dark-color);
+  }
+}
