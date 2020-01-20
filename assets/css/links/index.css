@@ -1,0 +1,19 @@
+@import "./vars.css";
+@import "../theme/vars.css";
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color-light-link);
+  background-color: var(--light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: var(--color-dark-link);
+        background-color: var(--dark-bg);
+  }
+}

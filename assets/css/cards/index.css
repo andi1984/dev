@@ -16,6 +16,14 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+/*
+ Inerhit colors for links from the card context.
+*/
+.card a {
+  color: currentColor;
+  background-color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   .card {
     color: var(--color-dark-card);
@@ -48,4 +56,3 @@
 .card--type-5 {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-
