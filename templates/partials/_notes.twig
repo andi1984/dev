@@ -1,9 +1,8 @@
-<ol class="cards">
+<ol class="list list--big">
 {% for site in sites %}
     {% if 'notes/' in site.url.pathname %}
-        <li class="card card--type-1">
-            <a class="card__header" href="{{site.url}}">{{site.title}}</a>
-            <details class="card__content">{{site.html|striptags}}</details>
+        <li class="list__item">
+            <a href="{{site.url}}">{{site.title}}</a>
         </li>
     {% endif %}
 {% endfor %}
