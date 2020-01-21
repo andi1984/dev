@@ -1,0 +1,10 @@
+@import "./vars.css";
+
+.list {
+  list-style-type: lower-roman;
+}
+
+.list--big {
+  font-size: 1.3rem;
+  content: 'JetBrains Mono, Operator Mono'
+}

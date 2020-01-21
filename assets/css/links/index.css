@@ -1,19 +1,28 @@
 @import "./vars.css";
-@import "../theme/vars.css";
+
 a,
-a:visited,
+a:visited {
+  text-decoration: none;
+  color: var(--color-light-link);
+  box-shadow: inset 0 -4px 0 var(--background-light-link);
+  transition: background 0.1s ease-in-out;
+}
+
 a:hover,
 a:active {
-  color: var(--color-light-link);
-  background-color: var(--light-bg);
+  background-color: var(--background-light-link);
 }
 
 @media (prefers-color-scheme: dark) {
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-        color: var(--color-dark-link);
-        background-color: var(--dark-bg);
+  a,
+  a:visited
+   {
+    color: var(--color-dark-link);
+    box-shadow: inset 0 -4px 0 var(--background-dark-link);
+  }
+
+  a:hover,
+  a:active {
+    background-color: var(--background-dark-link);
   }
 }

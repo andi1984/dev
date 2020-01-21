@@ -1,4 +1,6 @@
 :root {
-  --color-dark-link: var(--kournikova);
-  --color-light-link: var(--bittersweet);
+  --color-light-link: var(--cape-cod);
+  --background-light-link: var(--kournikova);
+  --color-dark-link: var(--sugar-cane);
+  --background-dark-link: var(--paarl);
 }

@@ -1,6 +1,7 @@
 @import "./colors.css";
 @import "./theme/index.css";
-@import "./prism.css";
-@import "./links/index.css";
 @import "./typo/index.css";
+@import "./links/index.css";
+@import "./list/index.css";
 @import "./cards/index.css";
+@import "./prism.css";
