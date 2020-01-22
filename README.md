@@ -15,6 +15,7 @@ The output files are saved to the `dist` directory.
 | title    |      Title of the page      |       "Foo" (default: The filename) |
 | sites    |  Array of all build sites   | cf. [Site interface](./utils/md.ts) |
 | content  | Content of the page as HTML |        cf. `"<h1>Hello World</h1>"` |
+| base_url |  The base url of the page   |           cf. URL in env vars below |
 
 ## Environment Variables
 
