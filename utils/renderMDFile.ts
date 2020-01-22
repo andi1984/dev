@@ -21,7 +21,8 @@ module.exports = async (site: Site, sites: Site[]) => {
     {
       title: site.title,
       sites,
-      content: site.html
+      content: site.html,
+      base_url: process.env.URL
     },
     (err: Error, html: string) => {
       return new Promise((resolve, reject) => {
