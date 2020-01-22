@@ -24,6 +24,7 @@ export interface Site {
 const MarkdownIt = require("markdown-it"),
   md = (frontmatterCallback: Function) =>
     new MarkdownIt({
+      html: true,
       replaceLink: generateURL
     })
       .use(require("markdown-it-replace-link"))
