@@ -1,0 +1,11 @@
+<footer class="footer">
+    <ol class="footer__list">
+    {% for site in sites %}
+        {% if 'meta/' in site.url.pathname %}
+        <li class="footer__list__item">
+            <a href="{{site.url}}">{{site.title}}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+</footer>
