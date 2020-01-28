@@ -16,12 +16,20 @@ module.exports = async (site: Site, sites: Site[]) => {
     fs.mkdirSync(DISTRIBUTION_FOLDER);
   }
 
+  // NOTE: Workaround of https://github.com/twigjs/twig.js/issues/509 to fail
+  // early in case of template does not exists, because renderFile is failing
+  // silently in that case.
+  if (!fs.existsSync(site.template)) {
+    throw new Error(`Template ${site.template} does not exist.`);
+  }
+  
   Twig.renderFile(
     site.template,
     {
       title: site.title,
       sites,
       content: site.html,
+      meta: site.meta,
       base_url: process.env.URL
     },
     (err: Error, html: string) => {
