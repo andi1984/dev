@@ -1,7 +1,8 @@
 const {
   frontmatterLines,
-  findFrontmatterTag,
-  frontmatterValue
+  frontmatterTag,
+  frontmatterValue,
+  findFrontmatterTag
 } = require("../frontmatter");
 
 describe("frontmatterLines", () => {
@@ -22,6 +23,14 @@ describe("frontmatterLines", () => {
         `
       ).length
     ).toBe(3);
+  });
+});
+
+describe("frontmatterTag", () => {
+  test("Simple tag", () => {
+    expect(frontmatterTag("title: An apple a day keeps the doctor away!")).toBe(
+      "title"
+    );
   });
 });
 

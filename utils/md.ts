@@ -13,17 +13,24 @@ export interface File {
   rel: String;
 }
 
+export interface Meta {
+  title: String;
+  template: String;
+}
+
 export interface Site {
   title: String;
   template: String;
   html: String;
   file: File;
   url: URL;
+  meta: Meta;
 }
 
 const MarkdownIt = require("markdown-it"),
   md = (frontmatterCallback: Function) =>
     new MarkdownIt({
+      html: true,
       replaceLink: generateURL
     })
       .use(require("markdown-it-replace-link"))
@@ -36,47 +43,29 @@ const getSiteObject = (absoluteFilePath: string): Site => {
   );
   const fileName = path.basename(absoluteFilePath, ".md");
 
-  // Set default template to render
-  let twigTemplate = "./templates/main.twig";
-
-  // Set default page title to the file name
-  let title = fileName;
+  // Meta-object
+  const DEFAULT_META = {
+    title: fileName, // Set default page title to the file name
+    template: "main.twig" // Set default template to render
+  };
+  let meta: Meta = DEFAULT_META;
 
   // Read in MD file synchronously.
   const mdString = fs.readFileSync(absoluteFilePath, "utf8");
   const htmlOutput = md((frontmatter: string): void => {
-    /* HANDLE TEMPLATE FRONTMATTER */
-    const templateFrontmatter = frontmatterUtils.findFrontmatterTag(
-      frontmatter,
-      "template"
-    );
-
-    if (templateFrontmatter) {
-      const templateName = frontmatterUtils.frontmatterValue(
-        templateFrontmatter
-      );
-
-      const targetTemplatePath = path.resolve(TEMPLATE_FOLDER, templateName);
-
-      if (fs.existsSync(targetTemplatePath)) {
-        twigTemplate = targetTemplatePath;
-      }
-    }
-
-    /* HANDLE TITLE FRONTMATTER */
-    const titleFrontmatter = frontmatterUtils.findFrontmatterTag(
-      frontmatter,
-      "title"
-    );
-
-    if (titleFrontmatter) {
-      title = frontmatterUtils.frontmatterValue(titleFrontmatter);
-    }
+    meta = frontmatterUtils
+      .frontmatterLines(frontmatter)
+      .reduce((acc: any, line: string): object => {
+        acc[
+          frontmatterUtils.frontmatterTag(line)
+        ] = frontmatterUtils.frontmatterValue(line);
+        return acc;
+      }, DEFAULT_META);
   }).render(mdString);
 
   return {
-    title,
-    template: twigTemplate,
+    title: meta.title,
+    template: path.resolve(TEMPLATE_FOLDER, meta.template),
     html: htmlOutput,
     file: {
       name: fileName,
@@ -85,7 +74,8 @@ const getSiteObject = (absoluteFilePath: string): Site => {
     },
     url: generateURL(
       path.relative(MARKDOWN_FOLDER, absoluteFilePath).replace(".md", "")
-    )
+    ),
+    meta
   };
 };
 
