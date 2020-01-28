@@ -1,10 +1,10 @@
 // https://stackoverflow.com/a/41975448/778340
-export { };
-  
+export {};
+
 /**
  * Returns frontmatter lines array based on given frontmatter string
  * @param {string} frontmatterString
- * @returns {array}
+ * @returns {array<string>}
  */
 const frontmatterLines = (frontmatterString: string): string[] =>
   frontmatterString.split("\n");
@@ -25,6 +25,14 @@ const findFrontmatterTag = (
 };
 
 /**
+ * Returns frontmatter tag for a given frontmatter line.
+ * @param {string} frontmatterLine 
+ * @returns {string}
+ */
+const frontmatterTag = (frontmatterLine: string): string =>
+  frontmatterLine.split(":")[0].trim();
+
+/**
  * Returns string based value of a frontmatter line.
  * @param {string} frontmatterLine
  * @returns {string}
@@ -32,4 +40,9 @@ const findFrontmatterTag = (
 const frontmatterValue = (frontmatterLine: string): string =>
   frontmatterLine.split(":")[1].trim();
 
-module.exports = { findFrontmatterTag, frontmatterLines, frontmatterValue };
+module.exports = {
+  findFrontmatterTag,
+  frontmatterLines,
+  frontmatterTag,
+  frontmatterValue
+};
