@@ -1,7 +1,6 @@
 ---
 template: landing.twig
-title: Hello world!
+title: Hello my fellow developers
 ---
-Wellcome on my new dev blog!
 
-## Heading with id
+Welcome to my dev blog. Take a look at my blog posts and notes:
