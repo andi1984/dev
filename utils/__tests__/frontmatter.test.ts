@@ -40,6 +40,10 @@ describe("frontmatterValue", () => {
       frontmatterValue("title: An apple a day keeps the doctor away!")
     ).toBe("An apple a day keeps the doctor away!");
   });
+
+  test("Frontmatter value containing a colon", () => {
+    expect(frontmatterValue("title: foo:bar 123")).toBe("foo:bar 123");
+  });
 });
 
 describe("findFrontmatterTag", () => {

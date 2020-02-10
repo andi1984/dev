@@ -10,12 +10,12 @@ The output files are saved to the `dist` directory.
 
 ## Twig Template Variables
 
-| Variable |                         Description                          |                                                      Example |
-| -------- | :----------------------------------------------------------: | -----------------------------------------------------------: |
-| title    |                      Title of the page                       |                                "Foo" (default: The filename) |
-| sites    |                   Array of all build sites                   |                          cf. [Site interface](./utils/md.ts) |
-| content  |                 Content of the page as HTML                  |                                 cf. `"<h1>Hello World</h1>"` |
-| base_url |                   The base url of the page                   |                                    cf. URL in env vars below |
+| Variable |                     Description                      |                                                      Example |
+| -------- | :--------------------------------------------------: | -----------------------------------------------------------: |
+| title    |                  Title of the page                   |                                "Foo" (default: The filename) |
+| sites    |               Array of all build sites               |                          cf. [Site interface](./utils/md.ts) |
+| content  |             Content of the page as HTML              |                                 cf. `"<h1>Hello World</h1>"` |
+| base_url |               The base url of the page               |                                    cf. URL in env vars below |
 | meta     | All metadata provided via frontmatter for given site | cf. {title: 'foo', template: 'bar', author: 'Max Mustermann' |
 
 ## Environment Variables
@@ -24,3 +24,13 @@ The output files are saved to the `dist` directory.
 | ----------- | :----------------------------------------------------------------------------------------------------------: | --------------------------------------------: |
 | URL         |                                               URL of your page                                               |                  `URL: https://www.google.de` |
 | PRETTY_URLS | Flag to indicate whether hosting can handle pretty urls (e.g. `/hello/world` instead of `/hello/world.html`) | `PRETTY_URLS: 1` (default: not set --> false) |
+
+## Configuration
+
+You can configure certain parts of the system. All config files are contained within the config folder.
+
+### Hooks
+
+| method       |                                Description                                 |                                  Example |
+| ------------ | :------------------------------------------------------------------------: | ---------------------------------------: |
+| sitesSorting | Sorts the sites before any further action (e.g. generating the HTML files) | Sort by date metadata/frontmatter field. |
