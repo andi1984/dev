@@ -1,6 +1,6 @@
 # Twig + Markdown HTML Generator
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/andi1984/back2roots)
+![Node CI](https://github.com/andi1984/back2roots/workflows/Node%20CI/badge.svg)
 
 Run `npm run start` to generate the HTML files based on the Markdown files saved inside the `md` folder.
 
