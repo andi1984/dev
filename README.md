@@ -1,6 +1,7 @@
 # Twig + Markdown HTML Generator
 
 ![Node CI](https://github.com/andi1984/back2roots/workflows/Node%20CI/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/andi1984/back2roots/badge.svg?branch=develop)](https://coveralls.io/github/andi1984/back2roots?branch=develop)
 
 Run `npm run start` to generate the HTML files based on the Markdown files saved inside the `md` folder.
 
