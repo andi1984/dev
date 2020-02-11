@@ -13,6 +13,6 @@ module.exports = {
     const dateA = new Date(siteA.meta.date).getTime();
     const dateB = new Date(siteB.meta.date).getTime();
 
-    return dateA - dateB;
+    return dateB - dateA;
   }
-};
+};  
