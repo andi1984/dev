@@ -21,7 +21,7 @@
     "watch-content": "npm-watch",
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
-    "assets": "echo \"Run your asset generation script here putting assets into the dist folder\" && exit 1",
+    "assets": "echo \"Run your asset generation script here putting assets into the dist folder\"",
     "start": "npm run build && npm run assets"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
