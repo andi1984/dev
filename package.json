@@ -22,7 +22,8 @@
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
     "assets": "echo \"Run your asset generation script here putting assets into the dist folder\" && exit 1",
-    "start": "npm run build && npm run assets"
+    "start": "npm run build && npm run assets",
+    "release": "release-it"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
   "license": "MIT",
@@ -45,6 +46,12 @@
   "devDependencies": {
     "jest": "^24.9.0",
     "npm-watch": "^0.6.0",
+    "release-it": "^13.5.0",
     "ts-jest": "^24.2.0"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
