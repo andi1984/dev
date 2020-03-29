@@ -1,7 +1,7 @@
 // https://stackoverflow.com/a/41975448/778340
 export {};
 
-import { Site } from "./md";
+import { Site } from "./interfaces";
 
 const path = require("path");
 const fs = require("fs");

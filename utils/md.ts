@@ -1,4 +1,5 @@
-import { URL } from "url";
+import { Site, Meta } from "../utils/interfaces";
+
 const path = require("path");
 const fs = require("fs");
 
@@ -6,26 +7,6 @@ const { generateURL } = require("./url");
 const frontmatterUtils = require("./frontmatter");
 const MARKDOWN_FOLDER = require("./constants").MARKDOWN_FOLDER;
 const TEMPLATE_FOLDER = require("./constants").TEMPLATE_FOLDER;
-
-export interface File {
-  name: String;
-  abs: String;
-  rel: String;
-}
-
-export interface Meta {
-  title: String;
-  template: String;
-}
-
-export interface Site {
-  title: String;
-  template: String;
-  html: String;
-  file: File;
-  url: URL;
-  meta: Meta;
-}
 
 const MarkdownIt = require("markdown-it"),
   md = (frontmatterCallback: Function) =>

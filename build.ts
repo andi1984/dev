@@ -1,6 +1,6 @@
 // https://stackoverflow.com/a/41975448/778340
 export {};
-
+import { Site } from "./utils/interfaces";
 require("dotenv").config();
 const path = require("path");
 const fs = require("fs");
@@ -10,6 +10,7 @@ const DISTRIBUTION_FOLDER = require("./utils/constants").DISTRIBUTION_FOLDER;
 const renderMarkdownFile = require("./utils/renderMDFile");
 const { getFiles, filter } = require("./utils/generators");
 const { getSiteObject } = require("./utils/md");
+const { sitesSorting } = require("./config/hooks");
 var RSS = require("rss");
 
 // Step 1: Clear output directory
@@ -17,7 +18,7 @@ syncRmRf(DISTRIBUTION_FOLDER);
 
 // Step 2: Create files
 (async () => {
-  let sites = [];
+  let sites: Site[] = [];
 
   /* lets create an rss feed */
   var feed = new RSS({
@@ -45,6 +46,9 @@ syncRmRf(DISTRIBUTION_FOLDER);
   )) {
     sites.push(getSiteObject(f));
   }
+
+  // Apply "sites" hooks
+  sites.sort(sitesSorting);
 
   for (const site of sites) {
     renderMarkdownFile(site, sites);

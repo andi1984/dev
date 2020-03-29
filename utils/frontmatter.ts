@@ -38,7 +38,7 @@ const frontmatterTag = (frontmatterLine: string): string =>
  * @returns {string}
  */
 const frontmatterValue = (frontmatterLine: string): string =>
-  frontmatterLine.split(":")[1].trim();
+  frontmatterLine.split(":").slice(1).join(':').trim();
 
 module.exports = {
   findFrontmatterTag,

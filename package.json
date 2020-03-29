@@ -1,6 +1,6 @@
 {
   "name": "back2roots",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "",
   "main": "server.js",
   "engines": {
@@ -21,7 +21,7 @@
     "watch-content": "npm-watch",
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
-    "assets": "echo \"Run your asset generation script here putting assets into the dist folder\" && exit 1",
+    "assets": "echo \"Run your asset generation script here putting assets into the dist folder\"",
     "start": "npm run build && npm run assets",
     "release": "release-it"
   },
