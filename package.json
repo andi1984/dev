@@ -18,6 +18,7 @@
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
+    "dev": "npx concurrently \"npx http-server dist\" \"npm run watch-content\" \"npm run watch\"", 
     "watch-content": "npm-watch",
     "watch": "ts-node-dev --respawn --transpileOnly ./build.ts",
     "build": "tsc && node ./build/build.js",
