@@ -30,7 +30,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^25.2.1",
     "@types/markdown-it": "0.0.9",
     "@types/node": "^13.11.1",
     "dotenv": "^8.2.0",
