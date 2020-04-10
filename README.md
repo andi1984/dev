@@ -13,6 +13,20 @@ The HTML content of the markdown files is going to be passed as `content` variab
 
 The output files are saved to the `dist` directory.
 
+## NPM scripts
+
+| Name          | Description                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| test          | Self-exploratory: Run your test suite here.                                              |
+| tsc           | Runs the typescript compiler and checks for errors                                       |
+| dev           | Starts a static file server and watches for content (e.g. template) or typescript files. |
+| watch-content | Watches for content (template) changes                                                   |
+| watch         | Watches for changes on the core typescript files for the static page generator itself.   |
+| build         | Builds the output static HTML files.                                                     |
+| assets        | Task for you to generate your assets with.                                               |
+| start         | Build HTML files using `build` task and builds assets with `assets` task.                |
+| release       | Command to generate a new release version.                                               |
+
 ## Twig Template Variables
 
 | Variable |                     Description                      |                                                      Example |
