@@ -1,3 +1,53 @@
 <header>
-    <a href="{{base_url}}">🏠</a>
+	<a href="{{base_url}}" class="logo">
+		<svg width="240" height="100" viewbox="0 0 240 100">
+			<title>Logo of andi1984.dev</title>
+			<desc>Logo showing "Andi1984" text with an animated bezier curve below.</desc>
+			<style>
+				@keyframes dash {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+
+				.underline {
+					stroke-dasharray: 220;
+					stroke-dashoffset: 200;
+					animation: dash 3s linear forwards;
+					stroke: var(--color-light-link);
+				}
+
+				.small,
+				.big {
+					fill: var(--color-light-link);
+				}
+				.small {
+					font: italic 20px monospace;
+				}
+
+				.big {
+					font: italic 40px monospace;
+				}
+
+				@media(prefers-color-scheme: dark) {
+					.small,
+					.big {
+						fill: var(--color-dark-link);
+					}
+
+					.underline {
+						stroke: var(--color-dark-link);
+					}
+				}
+			</style>
+			<g id="background">
+				<path id="logo-stroke" class="underline" d="M 10,70 C 90,20 100,80, 220,90" stroke-width="3" fill="none"/>
+			</g>
+			<g id="text">
+				<text x="100" y="50" class="big">Andi</text>
+				<text x="100" y="50" dx="20%" dy="20%" class="small">1984</text>
+			</g>
+		</svg>
+	</a>
+
 </header>
