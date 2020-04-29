@@ -1,0 +1,9 @@
+:root {
+  --header-dark-bg: var(--dark-color);
+  --header-dark-color: var(--dark-bg);
+
+  --header-light-bg: var(--light-color);
+  --header-light-color: var(--light-bg);
+
+  --header-triangle-height: max(4vh, 2vw);
+}

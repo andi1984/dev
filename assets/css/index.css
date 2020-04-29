@@ -1,7 +1,18 @@
-@import "./colors.css";
-@import "./theme/index.css";
-@import "./typo/index.css";
-@import "./links/index.css";
-@import "./list/index.css";
-@import "./cards/index.css";
-@import "./prism.css";
+html,
+body {
+  margin: 0;
+}
+
+main {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+@import './colors.css';
+@import './theme/index.css';
+@import './typo/index.css';
+@import './links/index.css';
+@import './list/index.css';
+@import './cards/index.css';
+@import './header/index.css';
+@import './prism.css';

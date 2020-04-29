@@ -26,8 +26,9 @@
     "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "watch-assets-js": "parcel watch assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
     "assets-js": "parcel build assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
-    "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
-    "assets": "npm run assets-css && npm run assets-js",
+    "copy-images": "cp -r assets/img dist/assets",
+    "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\" \"npm run copy-images\"",
+    "assets": "npm run assets-css && npm run assets-js && cp -r assets/img dist/assets",
     "start": "npm run build && npm run assets"
   },
   "author": "Andreas Sander <mail@andi1984.de>",

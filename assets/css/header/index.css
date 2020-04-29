@@ -1,0 +1,69 @@
+@import './vars.css';
+
+.masthead.masthead {
+  display: inline-block;
+}
+
+@media (min-aspect-ratio: 11/10) and (min-height: 400px) {
+  /* Page is wider than it is tall */
+  .triangle {
+    background-image: url('../../img/ava.min.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+
+@media (min-width: 300px) {
+  .masthead.masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    min-height: 150px;
+    height: calc(50vh - var(--header-triangle-height));
+  }
+
+  .triangle {
+    position: relative;
+    color: var(--header-light-color);
+    background-color: var(--header-light-bg);
+    /* */
+    background-size: min(calc(50% - var(--header-triangle-height)), 200px);
+    margin-bottom: var(--header-triangle-height);
+  }
+
+  .triangle h1 {
+    color: currentColor;
+  }
+
+  .triangle a:not(:hover):not(:active) {
+    color: currentColor;
+  }
+
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 1px; /* avoid spacing offset quirks, so have 1px overlap */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: var(--header-triangle-height) var(--header-triangle-height) 0
+      var(--header-triangle-height);
+    border-color: var(--header-light-bg) transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .triangle {
+    color: var(--header-dark-color);
+    background-color: var(--header-dark-bg);
+  }
+
+  .triangle::before {
+    border-top-color: var(--header-dark-bg);
+  }
+}
