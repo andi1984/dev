@@ -1,6 +1,5 @@
 {
-  "name": "back2roots",
-  "version": "0.2.0",
+  "name": "andi1984-dev",
   "description": "",
   "main": "server.js",
   "engines": {
@@ -16,53 +15,30 @@
     }
   },
   "scripts": {
-    "test": "jest",
-    "tsc": "tsc",
     "dev": "npx concurrently \"npx http-server dist\" \"npm run watch-content\" \"npm run watch-assets\"",
+    "build": "back2roots",
     "watch-content": "npm-watch",
-    "watch-build": "ts-node-dev --respawn --transpileOnly ./build.ts",
-    "build": "tsc && node ./build/build.js",
     "watch-assets-css": "parcel watch assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "watch-assets-js": "parcel watch assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
     "assets-js": "parcel build assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
     "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
     "assets": "npm run assets-css && npm run assets-js",
-    "start": "npm run build && npm run assets"
+    "start": "back2roots && npm run assets"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/markdown-it": "0.0.9",
+    "@andi1984/back2roots": "^0.4.0",
     "autoprefixer": "^9.7.3",
-    "@types/node": "^13.13.2",
-    "dotenv": "^8.2.0",
-    "html-minifier": "^4.0.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-front-matter": "^0.2.1",
-    "markdown-it-replace-link": "^1.0.1",
     "postcss": "^7.0.26",
-    "postcss-import": "^12.0.1",
-    "rimraf": "^3.0.2",
-    "rss": "^1.2.2",
-    "ts-node-dev": "^1.0.0-pre.44",
-    "twig": "^1.15.1",
-    "typescript": "^3.8.3"
+    "postcss-import": "^12.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
     "concurrently": "^5.0.2",
-    "jest": "^25.3.0",
     "parcel": "^1.12.4",
-    "npm-watch": "^0.6.0",
-    "release-it": "^13.5.5",
-    "ts-jest": "^25.3.1"
-  },
-  "release-it": {
-    "github": {
-      "release": true
-    }
+    "npm-watch": "^0.6.0"
   }
 }
