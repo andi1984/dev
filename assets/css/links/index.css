@@ -1,7 +1,7 @@
 @import "./vars.css";
 
 a {
-  display: inline-block;
+  display: inline;
 }
 
 a,
