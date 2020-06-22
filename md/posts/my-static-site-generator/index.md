@@ -1,6 +1,7 @@
 ---
 title: Back2Roots - My static site generator
 date: 2020-02-04T22:50:00+01:00
+template: blogpost.twig
 ---
 
 To bootstrap this blog, I wanted to do something new. Far away from the new hotness of static site generators like [Gatsby](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/).

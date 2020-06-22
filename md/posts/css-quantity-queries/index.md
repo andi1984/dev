@@ -1,31 +1,33 @@
 ---
 date: 2017-09-27T13:20:15+01:00
 title: CSS Quantity Queries
+template: blogpost.twig
 ---
 
 Hi,
 
 today I want to talk about a handy CSS snippet for day to day usage. The _CSS Quantity Queries_!
 
-##  How to use?
+## How to use?
+
 I don't want to give you the full background or insight into those. Especially as [Heidon Pickering](http://twitter.com/@heydonworks) has done this already in a great [A List Apart article](http://alistapart.com/article/quantity-queries-for-css).
 
 Let's say you have an unordered list
 
-``` html
+```html
 <ul>
-	<li>1st</li>
-	<li>2nd</li>
-	<li>3rd</li>
+  <li>1st</li>
+  <li>2nd</li>
+  <li>3rd</li>
 </ul>
 ```
 
 you want or need to style somehow different depending on the _quantity_ of list items in it. Here come the _quantity queries_ into the game.
 
-``` css
-li:nth-last-child(3):first-child, 
+```css
+li:nth-last-child(3):first-child,
 li:nth-last-child(3):first-child ~ li {
-	color: green;
+  color: green;
 }
 ```
 
@@ -39,14 +41,14 @@ So the above code snippet will style all list items of a list with three entries
 
 ## Advanced Usage - Quantity Thresholds
 
-Obviously you may asking for a more realistic use case than styling for a discrete quantity, but styling differently *starting* with a given threshold like "three or more entries".
+Obviously you may asking for a more realistic use case than styling for a discrete quantity, but styling differently _starting_ with a given threshold like "three or more entries".
 
 Here we can use the `n` argument:
 
-``` css
-li:nth-last-child(n+3), 
-li:nth-last-child(n+3) ~ li {
-	color: green;
+```css
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
+  color: green;
 }
 ```
 

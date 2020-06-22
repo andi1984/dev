@@ -1,6 +1,7 @@
 ---
 title: Variable Fonts
 date: 2019-03-04T20:08:29+01:00
+template: blogpost.twig
 ---
 
 Today I would like to talk about _variable fonts_ on the web. But what are those?
@@ -23,6 +24,7 @@ So how do the variable fonts solve this problem of requesting a bunch of files o
 ## Technical background
 
 ### Design axes
+
 Variable fonts define _axes of design_, thus dimensions of variations the typeface has like its _weight_.
 
 _Before_ this was done by _redrawing_ each single glyph for each, different characteristic of the variations.
@@ -38,23 +40,26 @@ For a more detailed introduction I would like to highly recommend you [Chris Lil
 At [Axis Praxis](https://www.axis-praxis.org) you can try it out your own changing the font variations. I can recommend for all of you which are not familiar to variable fonts to play around with the range sliders on their side to see how the font and the website changes.
 
 ### Control design axes by font-variation-settings
+
 The described design axes are controlled by the _font-variation-settings_ which are described as a list of key/value pairs.
 
 It is build up by four letter axis names followed by their respective value, e.g.
 
 ```css
 html {
-	font-family: "etc-grandstander", sans-serif;
-	font-variation-settings: "wght" 600, "slnt" 0;
+  font-family: 'etc-grandstander', sans-serif;
+  font-variation-settings: 'wght' 600, 'slnt' 0;
 }
 ```
 
 ### Browser support
+
 Although variable fonts are quite a new thing, the [browser support](https://caniuse.com/#feat=variable-fonts) is ~80% of all global users according to caniuse.com. Internet Explorer is not supporting variable fonts though!
 
 If you are interested in using variable fonts on your page, I can recommend you a good [article from Clearleft](https://medium.com/clear-left-thinking/how-to-use-variable-fonts-in-the-real-world-e6d73065a604) which is also pointing out fallback solutions.
 
 ## Variable fonts in the wild!
+
 Back in December I bought [ETC Grandstander](https://v-fonts.com/fonts/etc-grandstander) from the great [ETC](https://etc.supply/) team which are selling also a few other, nice variable fonts.
 
 You can find a list of available variable fonts at [v-fonts.com](https://v-fonts.com/).
@@ -62,11 +67,13 @@ You can find a list of available variable fonts at [v-fonts.com](https://v-fonts
 Over there at [CSS Tricks](https://css-tricks.com/weird-things-variable-fonts-can-do/) you can read all the _weird things_ you can do with variable fonts. And they have a growing [guide collection](https://css-tricks.com/guides/opentype-variable-fonts/) about that topic. Take a look!
 
 ### Developer tools
+
 I can highly recommend the font inspection in the [Firefox Developer tools](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts).
 
 They provide the whole list on information including the design axes with a range slider [you can modify on the fly at the page](https://twitter.com/andi1984/status/1078381928192061441).
 
 ### Variable fonts @ andi1984.de 🎉
+
 As you might have seen already, I'm actually using my bought font on [my personal blog](https://andi1984.de).
 
 [Take a look with the mentioned Firefox Devtools!](https://twitter.com/andi1984/status/1078381928192061441) 🤣
