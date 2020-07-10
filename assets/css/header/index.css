@@ -36,6 +36,8 @@
 
   .triangle h1 {
     color: currentColor;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .triangle a:not(:hover):not(:active) {

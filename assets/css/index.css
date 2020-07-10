@@ -4,8 +4,8 @@ body {
 }
 
 main {
-    margin-left: 8px;
-    margin-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 @import './colors.css';
@@ -16,3 +16,15 @@ main {
 @import './cards/index.css';
 @import './header/index.css';
 @import './prism.css';
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
