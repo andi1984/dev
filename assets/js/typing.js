@@ -23,7 +23,15 @@ export default () => {
     }
   };
 
+  let prevOnLoad;
+  if(typeof window.onload === 'function') {
+    prevOnLoad = window.onload;
+  }
   window.onload = () => {
+    if(!!prevOnLoad) {
+      prevOnLoad();
+    }
+
     const typings = document.getElementsByClassName('typing');
     [...typings].forEach(checkTyping);
   };

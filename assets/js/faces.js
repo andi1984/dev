@@ -20,7 +20,15 @@ export default () => {
     });
   };
 
+  let prevOnLoad;
+  if(typeof window.onload === 'function') {
+    prevOnLoad = window.onload;
+  }
   window.onload = () => {
+    if(!!prevOnLoad) {
+      prevOnLoad();
+    }
+
     // Wait x seconds before changing the background image.
     loadTimeout = window.setTimeout(() => {
       if (resizeTimeout) {
