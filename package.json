@@ -32,14 +32,14 @@
   "dependencies": {
     "@andi1984/back2roots": "^0.4.0",
     "@babel/runtime": "^7.10.3",
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.8.6",
     "postcss": "^7.0.26",
     "postcss-import": "^12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/plugin-transform-runtime": "^7.10.3",
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.8.6",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^5.0.2",
     "npm-watch": "^0.6.0",
