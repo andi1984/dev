@@ -1,0 +1,14 @@
+<!-- Primary Meta Tags -->
+{% set description = (content|striptags|length > 160 ? content|striptags|slice(0, 160) ~ '...' : content|striptags)|trim %}
+<meta name="title" content="{{ title }}">
+<meta name="description" content="{{description}}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="{{title}}">
+<meta property="twitter:description" content="{{description}}">
