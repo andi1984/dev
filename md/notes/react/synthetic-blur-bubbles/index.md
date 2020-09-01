@@ -1,6 +1,7 @@
 ---
 date: 2020-05-23T18:45:45+01:00
 title: React - Synthetic blur event
+template: blogpost.twig
 ---
 
 First, let's have a look at what the *blur* event actually is.

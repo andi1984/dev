@@ -1,6 +1,7 @@
 ---
 date: 2016-11-20T18:45:45+01:00
 title: Mistakes I made - Array.prototype.indexOf
+template: blogpost.twig
 ---
 
 Today I want to talk about a misconception about Array.prototype.indexOf I came across a few days ago.

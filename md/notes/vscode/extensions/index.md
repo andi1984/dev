@@ -1,6 +1,7 @@
 ---
 title: VSCode Extensions
 date: 2019-07-30T08:45:39+02:00
+template: blogpost.twig
 ---
 
 I'm using [VSCode](https://code.visualstudio.com/) since several years for private projects, but also during my working time as a frontend developer.
