@@ -18,7 +18,7 @@ I really sympathize with Jeffrey without knowing him personally. But he also has
 
 IMHO every webdev should look into the archive and listen to them. Even if there will be no further episodes on it.
 
-## [The Clearlef Podcast](https://podcast.clearleft.com/)
+## [The Clearleft Podcast](https://podcast.clearleft.com/)
 
 Another podcast with a very popular face behind: [Jeremy Keith](https://en.wikipedia.org/wiki/Jeremy_Keith_(web_developer)) from [Clearleft](https://clearleft.com/). It is quite new into the wild, so I expect there is more to come here.
 
@@ -60,9 +60,9 @@ IMHO the podcast has high potential to improve on certain areas so I can and wil
 
 ## Special: [Working Draft](https://workingdraft.de/) (German)
 
-Although this is a not a common english speaking podcast – although there are some episodes in English, I really, really can not leave it unmentioned in this list.
+Although this is a not a common English speaking podcast – although there are some episodes in English, I really, really can not leave it unmentioned in this list.
 
-If you are a webdev and a native german speaker you have to know this podcast!
+If you are a webdev and a native German speaker you have to know this podcast!
 
 The podcast is actively managed since nearly a decade, starting in 2011, by six webdevs from Germany and Austria. In most of their 440 episodes they speak about one particular topic with one or more guests they invite into their podcast.
 
@@ -72,4 +72,4 @@ The topics are wide-spread from CMS systems to frontend unit-testing and everyth
 
 The most funny, but also really interesting episodes are the "wheel of fortune"-specials where they randomly pick and philosophize about W3C specifications.
 
-I really recommend this podcast to any native german webdev and I hope this podcast will last for the next decade as well!
+I really recommend this podcast to any native German webdev and I hope this podcast will last for the next decade as well!
