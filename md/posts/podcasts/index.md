@@ -60,7 +60,7 @@ IMHO the podcast has high potential to improve on certain areas so I can and wil
 
 ## Special: [Working Draft](https://workingdraft.de/) (German)
 
-Although this is a not a common english speaking podcast – although their are some episodes in English, I really, really can not leave it unmentioned in this list.
+Although this is a not a common english speaking podcast – although there are some episodes in English, I really, really can not leave it unmentioned in this list.
 
 If you are a webdev and a native german speaker you have to know this podcast!
 
