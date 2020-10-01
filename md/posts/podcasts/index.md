@@ -8,7 +8,7 @@ Today I want to talk about my favorite tech podcasts I hear on a regular basis. 
 
 According to my podcastplayer [PocketCasts](https://pocketcasts.com) I have listened since July 16, 2017 for more than 21 days to various, not only tech-related, podcasts. Which still sounds crazy to me, but it pick ups the point that I really, really like hearing podcasts :).
 
-And those are my favorte tech podcasts listed in alphabetical order.
+And those are my favorite tech podcasts listed in alphabetical order.
 
 ## [The Big Web Show](https://5by5.tv/bigwebshow)
 
