@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import { h, render } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import ReactPlaceholder from 'react-placeholder';
@@ -30,9 +29,7 @@ export default function () {
       };
     }, []);
 
-    const approxDownlink = get(window, 'navigator.connection.downlink', 0);
-
-    return approxDownlink < 1.5 ? (
+    return (
       <ReactPlaceholder
         className="blockquote--landing"
         type="text"
@@ -43,9 +40,7 @@ export default function () {
       >
         <Quote quote={quote} />
       </ReactPlaceholder>
-    ) : !!quote ? (
-      <Quote quote={quote} />
-    ) : null;
+    );
   }
 
   const App = <ProgrammingQuotes />;
