@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title>{{ title }}</title>
-        {% include "partials/_meta.twig" %}
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/bundle.css"></link>
-        <script type="text/javascript" src="/assets/bundle.js"></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{base_url}}/rss.xml" />
-    </head>
-    <body>
-        {% block body %}
-        {% endblock %}
-    </body>
+	<head>
+		<title>{{ title }}</title>
+		{% include "partials/_meta.twig" %}
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/assets/bundle.css"/>
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+		<script type="text/javascript" src="/assets/bundle.js"></script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{base_url}}/rss.xml"/>
+	</body>
 </html>

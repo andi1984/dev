@@ -1,9 +1,10 @@
 {% extends "./main.twig" %}
 
 {% block main_content %}
-    {{content}}
-    <h2>Blogposts</h2>
-    {% include "partials/_blogposts.twig" %}
-    <h2>Notes</h2>
-    {% include "partials/_notes.twig" %}
+	<section id="quote"></section>
+	{{content}}
+	<h2>Blogposts</h2>
+	{% include "partials/_blogposts.twig" %}
+	<h2>Notes</h2>
+	{% include "partials/_notes.twig" %}
 {% endblock %}
