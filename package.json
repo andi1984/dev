@@ -20,8 +20,8 @@
     "watch-content": "npm-watch",
     "watch-assets-css": "parcel watch assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
     "assets-css": "parcel build assets/css/index.css --public-url /assets/ --out-dir dist/assets --out-file bundle.css",
-    "watch-assets-js": "parcel watch assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
-    "assets-js": "parcel build assets/js/index.js --public-url /assets/ --out-dir dist/assets --out-file bundle.js",
+    "watch-assets-js": "rollup --config --watch",
+    "assets-js": "rollup --config",
     "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
     "assets": "npm run assets-css && npm run assets-js",
     "start": "back2roots -p -c && npm run assets"
@@ -33,18 +33,30 @@
     "@andi1984/back2roots": "^0.6.1",
     "@babel/runtime": "^7.10.3",
     "autoprefixer": "^9.8.6",
+    "lodash": "^4.17.20",
     "postcss": "^7.0.32",
-    "postcss-import": "^12.0.1"
+    "postcss-import": "^12.0.1",
+    "preact": "^10.5.4",
+    "react-placeholder": "^4.0.3",
+    "whatwg-fetch": "^3.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.12.0",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "autoprefixer": "^9.8.6",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^5.3.0",
     "npm-watch": "^0.6.0",
     "parcel": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.4.3"
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "rollup": "^2.30.0",
+    "rollup-plugin-postcss": "^3.1.8"
   },
   "staticFiles": {
     "staticPath": "assets/img/faces",

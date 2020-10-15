@@ -1,5 +1,9 @@
 @import './vars.css';
 
+header {
+  margin-bottom: 100px;
+}
+
 .masthead.masthead {
   display: inline-block;
 }
