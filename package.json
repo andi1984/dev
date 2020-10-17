@@ -55,7 +55,7 @@
     "npm-watch": "^0.6.0",
     "parcel": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.4.3",
-    "rollup": "^2.30.0",
+    "rollup": "^2.32.0",
     "rollup-plugin-postcss": "^3.1.8"
   },
   "staticFiles": {
