@@ -73,3 +73,23 @@ header {
     border-top-color: var(--header-dark-bg);
   }
 }
+
+.header {
+  position: relative;
+}
+
+.header__meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+@media (min-width: 1100px) {
+  .header__meta {
+    display: flex;
+    min-width: 33vw;
+  }
+}
