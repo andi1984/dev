@@ -34,7 +34,7 @@
     "@babel/runtime": "^7.10.3",
     "autoprefixer": "^9.8.6",
     "lodash": "^4.17.20",
-    "postcss": "^7.0.32",
+    "postcss": "^8.1.2",
     "postcss-import": "^12.0.1",
     "preact": "^10.5.4",
     "react-placeholder": "^4.0.3",
