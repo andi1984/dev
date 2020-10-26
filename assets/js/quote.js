@@ -43,6 +43,9 @@ export default function () {
     );
   }
 
-  const App = <ProgrammingQuotes />;
-  render(App, document.getElementById('quote'));
+  const targetDOMElement = document.getElementById('quote');
+  if (!!targetDOMElement) {
+    const App = <ProgrammingQuotes />;
+    render(App, targetDOMElement);
+  }
 }
