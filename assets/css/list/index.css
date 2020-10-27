@@ -1,4 +1,4 @@
-@import "./vars.css";
+@import './vars.css';
 
 .list {
   list-style-type: lower-roman;
@@ -6,4 +6,28 @@
 
 .list--big {
   font-size: 1.3rem;
+}
+
+.list__item--update::before {
+  content: 'Update';
+  background-color: var(--background-light-tag);
+  color: var(--color-light-tag);
+  margin-right: 10px;
+  padding: 2px 3px;
+  font-size: 0.7em;
+  border-radius: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .list__item--update::before {
+    background-color: var(--background-dark-tag);
+    color: var(--color-dark-tag);
+  }
+}
+
+.list__item::after {
+  content: attr(data-date);
+  padding: 1px;
+  font-size: 0.7em;
+  margin-left: 10px;
 }

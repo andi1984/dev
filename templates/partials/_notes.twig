@@ -1,9 +1,9 @@
 <ol class="list list--big">
-{% for site in sites %}
-    {% if 'notes/' in site.url.pathname %}
-        <li class="list__item">
-            <a href="{{site.url}}">{{site.title}}</a>
-        </li>
-    {% endif %}
-{% endfor %}
+	{% for site in sites %}
+		{% if 'notes/' in site.url.pathname %}
+			<li class="list__item {%ifsite.meta.update%}list__item--update{%endif%}" data-date="{% if site.meta.update %}{{site.meta.update|date("m/d/Y")}}{% else %}{{site.meta.date|date("m/d/Y")}}{% endif %}">
+				<a href="{{site.url}}">{{site.title}}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
 </ol>

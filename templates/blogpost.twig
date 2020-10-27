@@ -1,8 +1,29 @@
 {% extends "./main.twig" %}
 
 {% block main_content %}
-<article class="post">
-    <h1>{{title}}</h1>
-    {{content}}
-</article>
+	<article class="post">
+		<h1>{{title}}</h1>
+		<details>
+			<summary>About this post</summary>
+			<dl>
+				<dt>Written:</dt>
+				<dd>
+					<time datetime="{{meta.date|date("Y-m-d H:i")}}">{{meta.date|date("m/d/Y")}}</time>
+
+				</dd>
+				{% if meta.update %}
+					<dt>Last update:</dt>
+					<dd>
+						<time datetime="{{meta.update|date("Y-m-d H:i")}}">{{meta.update|date("m/d/Y")}}</time>
+
+
+					</dd>
+				{% endif %}
+			</dl>
+		</details>
+
+
+		{{content}}
+		faslmaslm
+	</article>
 {% endblock %}

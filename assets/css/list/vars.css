@@ -1,0 +1,6 @@
+:root {
+  --color-light-tag: var(--cape-cod);
+  --background-light-tag: var(--kournikova);
+  --color-dark-tag: var(--sugar-cane);
+  --background-dark-tag: var(--paarl);
+}
