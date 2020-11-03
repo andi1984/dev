@@ -1,16 +1,22 @@
 ---
 date: 2017-09-27T13:20:15+01:00
+update: 2020-11-03T09:08:16
 title: CSS Quantity Queries
 template: blogpost.twig
 ---
 
 Hi,
 
-today I want to talk about a handy CSS snippet for day to day usage. The _CSS Quantity Queries_!
+today I want to talk about a handy CSS snippet for day to day usage. The _CSS
+Quantity Queries_! There is also [short video](www.youtube.com/watch?v=PXmvVxx_I60) about it, in case you just want to
+understand the basic idea behind it. The following post goes more into detail on
+how to use them.
 
 ## How to use?
 
-I don't want to give you the full background or insight into those. Especially as [Heidon Pickering](http://twitter.com/@heydonworks) has done this already in a great [A List Apart article](http://alistapart.com/article/quantity-queries-for-css).
+I don't want to give you the full background or insight into those. Especially
+as [Heidon Pickering](http://twitter.com/@heydonworks) has done this already in
+a great [A List Apart article](http://alistapart.com/article/quantity-queries-for-css).
 
 Let's say you have an unordered list
 
@@ -52,7 +58,7 @@ li:nth-last-child(n + 3) ~ li {
 }
 ```
 
-where `li:nth-last-child(n+3)` "[...] omits the last [two] items from a set of any length, meaning that when you reduce the length of the set below [three], you cease to see any selected items. It’s a sort of “sliding doors” effect. [...] If, indeed, the set is greater than or equal to [three] in total, then all that remains is to style those last five items as well." ([A List Apart article "Quantity Queries for CSS"](https://alistapart.com/article/quantity-queries-for-css)).
+where `li:nth-last-child(n+3)` "[...] omits the last [two] items from a set of any length, meaning that when you reduce the length of the set below [three], you cease to see any selected items. It’s a sort of “sliding doors” effect. [...] If, indeed, the set is greater than or equal to [three] in total, then all that remains is to style those last [two] items as well." ([A List Apart article "Quantity Queries for CSS"](https://alistapart.com/article/quantity-queries-for-css)).
 
 Here you can play around with a live CodePen demo. Have fun!
 
