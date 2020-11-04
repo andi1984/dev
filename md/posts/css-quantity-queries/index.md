@@ -8,7 +8,7 @@ template: blogpost.twig
 Hi,
 
 today I want to talk about a handy CSS snippet for day to day usage. The _CSS
-Quantity Queries_! There is also [short video](www.youtube.com/watch?v=PXmvVxx_I60) about it, in case you just want to
+Quantity Queries_! There is also [short video](https://www.youtube.com/watch?v=PXmvVxx_I60) about it, in case you just want to
 understand the basic idea behind it. The following post goes more into detail on
 how to use them.
 
