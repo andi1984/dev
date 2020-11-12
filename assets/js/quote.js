@@ -1,9 +1,9 @@
-import { h, render } from 'preact';
+import { h, options, render } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import ReactPlaceholder from 'react-placeholder';
 import 'react-placeholder/lib/reactPlaceholder.css';
 
-import 'whatwg-fetch';
+import quotes from '../data/quotes.json';
 
 export default function () {
   function Quote({ quote }) {
@@ -15,19 +15,7 @@ export default function () {
   }
   // Create your app
   function ProgrammingQuotes() {
-    const [quote, setQuote] = useState(null);
-    useEffect(() => {
-      // Trigger your effect
-      window
-        .fetch('https://programming-quotes-api.herokuapp.com/quotes/random')
-        .then((response) => response.json())
-        .then(({ en: text, author }) => {
-          setQuote({ text, author });
-        });
-      return () => {
-        // Optional: Any cleanup code
-      };
-    }, []);
+    const quote = quotes.items[Math.floor(Math.random() * quotes.items.length)];
 
     return (
       <ReactPlaceholder

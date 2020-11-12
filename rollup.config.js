@@ -3,6 +3,7 @@ import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 
 export default {
   input: 'assets/js/index.js',
@@ -18,5 +19,6 @@ export default {
     commonjs(),
     nodeResolve(),
     postcss({ plugins: [] }),
+    json(),
   ],
 };

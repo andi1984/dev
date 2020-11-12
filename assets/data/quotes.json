@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "author": "Martin Fowler",
+      "text": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+    },
+    {
+      "author": "Chris Heilmann",
+      "text": "Java is to JavaScript what car is to Carpet."
+    },
+    {
+      "author": "John Johnson",
+      "text": "First, solve the problem. Then, write the code."
+    },
+    {
+      "author": "Dan Salomon",
+      "text": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code."
+    },
+    {
+      "author": "Anonymous",
+      "text": "In order to understand recursion, one must first understand recursion."
+    },
+    {
+      "author": "Burt Rutan",
+      "text": "Testing leads to failure, and failure leads to understanding."
+    },
+    {
+      "author": "Grace Hopper",
+      "text": "The most damaging phrase in the language is.. it's always been done this way"
+    },
+    {
+      "author": "Joyce Wheeler",
+      "text": "Sometimes it's better to leave something alone, to pause, and that's very true of programming."
+    }
+  ]
+}
