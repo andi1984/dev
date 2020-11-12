@@ -4,6 +4,10 @@ import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
+import injectProcessEnv from 'rollup-plugin-inject-process-env';
+import dotenv from 'dotenv';
+
+console.log(dotenv.config());
 
 export default {
   input: 'assets/js/index.js',
@@ -20,5 +24,8 @@ export default {
     nodeResolve(),
     postcss({ plugins: [] }),
     json(),
+    injectProcessEnv({
+      sentryDSN: process.env.SENTRY_DSN,
+    }),
   ],
 };
