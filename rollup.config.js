@@ -6,9 +6,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
 import dotenv from 'dotenv';
-
-console.log(dotenv.config());
-
+dotenv.config();
 export default {
   input: 'assets/js/index.js',
   output: { file: 'dist/assets/bundle.js', format: 'cjs', sourcemap: true },

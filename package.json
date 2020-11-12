@@ -24,7 +24,8 @@
     "assets-js": "rollup --config",
     "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
     "assets": "npm run assets-css && npm run assets-js",
-    "start": "back2roots -p -c && npm run assets"
+    "gen-env": "node ./scripts/create-env.js",
+    "start": "gen-env && back2roots -p -c && npm run assets"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
   "license": "MIT",
