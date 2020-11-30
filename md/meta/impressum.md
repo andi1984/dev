@@ -1,11 +1,16 @@
 ---
 title: Impressum
 ---
-
+<h2>Datenschutz</h2>
 <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
-<p>Andreas Sander
-<br>Im Stockwald 12
-<br>66265 Heusweiler</p>
+<div class="h-card">
+    <span class="p-name">Andreas Sander</span>, 
+    <span class="p-nickname">andi1984</span>
+    <p class="p-street-address">Im Stockwald 12</p>
+    <span class="p-postal-code">66265</span>
+    <span class="p-locality">Heusweiler</span>,
+    <div class="p-country-name">Germany</div>
+</div>
 <h2>Ihre Betroffenenrechte</h2>
 <p>Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:</p>
 <ul>
