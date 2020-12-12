@@ -10,22 +10,6 @@ Today I would like to talk about flexbox and the automatic minimum size of flex 
 
 Let us start looking at some example code:
 
-```html
-<section>
-  <div>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
-  </div>
-</section>
-```
-
 ```css
 section {
   display: flex;
@@ -37,9 +21,9 @@ div {
 }
 ```
 
-What do you think? How much will the height be of the `div` flex child? It will be the minimum size the content will need to be rendered.
+What do you think? How much will the height be of the `div` flex child? **It will be the minimum size the content will need to be rendered.**
 
-## Example + Overflow container
+## Example (Overflow container)
 
 Let's adjust the example by making the flex-child element a scroll container:
 
@@ -50,7 +34,7 @@ div {
 }
 ```
 
-What will the height be now? It will be the flex-basis of 50px.
+What will the height be now? **It will be the flex-basis of 50px.**
 
 ## Explanation
 
@@ -58,3 +42,12 @@ Having a look into the official specs can be helpful here:
 
 > To provide a more reasonable default minimum size for flex items, the used value of a main axis automatic minimum size on a flex item that is not a scroll container is a content-based minimum size; for scroll containers the automatic minimum size is zero, as usual.
 > -- <cite>[W3C spec](https://www.w3.org/TR/css-flexbox-1/#min-size-auto)</cite>
+
+Thus this means:
+
+1. For non-scroll containers, flexbox automatically increases the main axis minimum size to fit the content's needs
+2. For scroll containers, flexbox sets the minimum size to zero
+
+## My Misconception
+
+My misconception about this is in the first case, that in any case I have to set a `min-height` to avoid
