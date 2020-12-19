@@ -1,4 +1,4 @@
-@import "./vars.css";
+@import './vars.css';
 
 a {
   display: inline;
@@ -19,8 +19,7 @@ a:active {
 
 @media (prefers-color-scheme: dark) {
   a,
-  a:visited
-   {
+  a:visited {
     color: var(--color-dark-link);
     box-shadow: inset 0 -4px 0 var(--background-dark-link);
   }
@@ -29,4 +28,23 @@ a:active {
   a:active {
     background-color: var(--background-dark-link);
   }
+}
+
+.link--devto {
+  flex: 0 1 auto;
+  display: inline-block;
+  background-color: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--background-dark-link);
+}
+
+@media (prefers-color-scheme: dark) {
+  .link--devto {
+    border-bottom-color: var(--background-light-link);
+  }
+}
+
+.link--devto img {
+  width: 30px;
+  vertical-align: middle;
 }

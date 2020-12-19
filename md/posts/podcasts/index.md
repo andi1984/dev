@@ -1,7 +1,8 @@
 ---
-title: My favorite webdev podcasts 
+title: My favorite webdev podcasts
 date: 2020-10-01T22:18:52
 template: blogpost.twig
+devto: https://dev.to/andi1984/my-favorite-webdev-podcasts-4110
 ---
 
 Today I want to talk about my favorite tech podcasts I hear on a regular basis. I discovered podcasts as a nice way of learning while actually being off-screen (e.g. cooking, cleaning, gardening etc.).
@@ -20,7 +21,7 @@ IMHO every webdev should look into the archive and listen to them. Even if there
 
 ## [The Clearleft Podcast](https://podcast.clearleft.com/)
 
-Another podcast with a very popular face behind: [Jeremy Keith](https://en.wikipedia.org/wiki/Jeremy_Keith_(web_developer)) from [Clearleft](https://clearleft.com/). It is quite new into the wild, so I expect there is more to come here.
+Another podcast with a very popular face behind: [Jeremy Keith](<https://en.wikipedia.org/wiki/Jeremy_Keith_(web_developer)>) from [Clearleft](https://clearleft.com/). It is quite new into the wild, so I expect there is more to come here.
 
 The podcast is done in a more narrative way with many different interview guests speaking about their experiences. It is then cut in such a way that Jeremy can connect them together with a nice story. You can really hear that Clearleft is investing a lot of time into this podcast to publish high quality and good to follow episodes.
 

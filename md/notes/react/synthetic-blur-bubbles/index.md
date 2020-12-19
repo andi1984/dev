@@ -2,9 +2,10 @@
 date: 2020-05-23T18:45:45+01:00
 title: React - Synthetic blur event
 template: blogpost.twig
+devto: https://dev.to/andi1984/react-synthetic-blur-event-3469
 ---
 
-First, let's have a look at what the *blur* event actually is.
+First, let's have a look at what the _blur_ event actually is.
 
 ## Definition
 
@@ -14,7 +15,7 @@ First, let's have a look at what the *blur* event actually is.
 
 ## Native browser behaviour
 
-It is clearly saying that the *blur* event does not bubble up the DOM tree to all parent elements. I proved this by [a CodePen demo](https://codepen.io/andi1984/pen/dyGPoON).
+It is clearly saying that the _blur_ event does not bubble up the DOM tree to all parent elements. I proved this by [a CodePen demo](https://codepen.io/andi1984/pen/dyGPoON).
 
 ## Behaviour within React
 

@@ -3,3 +3,22 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.post__header {
+  margin: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+@media (min-width: 800px) {
+  .post__header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.post__header__actions {
+  display: flex;
+  flex-direction: row;
+}

@@ -2,6 +2,7 @@
 title: Starting with TypeScript via JSDoc
 date: 2020-11-27T11:08:22
 template: blogpost.twig
+devto: https://dev.to/andi1984/starting-with-typescript-via-jsdoc-3ji5
 ---
 
 In this post it is all about a very interesting technique to use the typing definition of TypeScript without doing a full buy-in for TypeScript.

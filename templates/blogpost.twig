@@ -2,7 +2,17 @@
 
 {% block main_content %}
 	<article class="post">
-		<h1>{{title}}</h1>
+		<header class="post__header">
+			<h1>{{title}}</h1>
+			<section class="post__header__actions">
+				{% if meta.devto %}
+					<a class="link--devto" href="{{meta.devto}}" target="_blank">Read on
+						<img alt="dev.to logo" src="https://d2fltix0v2e0sb.cloudfront.net/dev-black.png"/></a>
+				{% endif %}
+			</section>
+		</header>
+
+
 		<details>
 			<summary>About this post</summary>
 			<dl>

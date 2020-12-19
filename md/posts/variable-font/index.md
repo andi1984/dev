@@ -2,6 +2,7 @@
 title: Variable Fonts
 date: 2019-03-04T20:08:29+01:00
 template: blogpost.twig
+devto: https://dev.to/andi1984/variable-fonts-1i9l
 ---
 
 Today I would like to talk about _variable fonts_ on the web. But what are those?
