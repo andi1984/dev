@@ -25,7 +25,8 @@
     "watch-assets": "concurrently \"npm run watch-assets-css\" \"npm run watch-assets-js\"",
     "assets": "npm run assets-css && npm run assets-js",
     "gen-env": "node ./scripts/create-env.js",
-    "start": "npm run gen-env && back2roots -c && npm run assets"
+    "copy-dist-src": "node ./scripts/copy-dist.js",
+    "start": "npm run gen-env && back2roots -c && npm run assets && npm run copy-dist-src"
   },
   "author": "Andreas Sander <mail@andi1984.de>",
   "license": "MIT",
