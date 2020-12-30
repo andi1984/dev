@@ -1,5 +1,10 @@
 {% extends "./main.twig" %}
 
+{% block head_content %}
+	{{ parent() }}
+	{% include "partials/_microdata_post.twig" %}
+{% endblock %}
+
 {% block main_content %}
 	<article class="post">
 		<header class="post__header">

@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+	{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{url}}"
+        },
+        "headline": "{{title}}",
+        "datePublished":"{{meta.date}}",
+        {% if meta.update %}
+        "dateModified": "{{meta.update}}",
+        {% endif %}
+        "author": {
+            "@type": "Person",
+            "name": "Andreas Sander"
+        },
+        {% if meta.description %}
+        "description": "{{meta.description}}"
+        {% endif %}
+	}
+</script>
