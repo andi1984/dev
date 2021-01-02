@@ -8,15 +8,19 @@
         },
         "headline": "{{title}}",
         "datePublished":"{{meta.date}}",
-        {% if meta.update %}
-        "dateModified": "{{meta.update}}",
-        {% endif %}
-        "author": {
+	{% if meta.update %}
+		"dateModified": "{{meta.update}}",
+	{% endif %}
+	{% if meta.description %}
+		"description": "{{meta.description}}",
+	{% endif %}
+	    "author": {
             "@type": "Person",
             "name": "Andreas Sander"
         },
-        {% if meta.description %}
-        "description": "{{meta.description}}"
-        {% endif %}
-	}
+        "publisher": {
+            "@type": "Person",
+            "name": "Andreas Sander"
+        }
+    }
 </script>
