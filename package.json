@@ -38,7 +38,7 @@
     "@sentry/tracing": "^5.29.0",
     "autoprefixer": "^9.8.6",
     "lodash": "^4.17.20",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.3",
     "postcss-import": "^12.0.1",
     "preact": "^10.5.7",
     "react-placeholder": "^4.0.3",
