@@ -24,8 +24,6 @@ I'm looking forward to this series as it is at the same time a good retrospectiv
 
 In the meantime: For German readers I can link you to [a blogpost](https://andi1984.de/post/working-remote/) I wrote three years ago thus after two years of remote work.
 
-[Here is the auto-translated text](https://translate.google.com/translate?hl=&sl=auto&tl=en&u=https%3A%2F%2Fandi1984.de%2Fpost%2Fworking-remote%2F)
-
 The next part of this series will be available in the upcoming days.
 
 Greets,
