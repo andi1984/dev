@@ -2,6 +2,7 @@
 date: 2021-01-16 17:35:01
 title: My favorite online editors
 template: blogpost.twig
+description: Whether it is for prototyping or trying out some code very fast. Online (code) editors are very popular nowadays and in this note I share my favorite editors with you.
 ---
 
 You want to try something out very quickly or you are about prototyping some idea? Online editors/IDEs can be super helpful for that.
