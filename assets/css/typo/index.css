@@ -1,4 +1,23 @@
-@import "./vars.css";
+@import './vars.css';
+
+@font-face {
+  font-family: 'Bowlby One SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/bowlby-one-sc-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('../fonts/bowlby-one-sc-v12-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/bowlby-one-sc-v12-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../fonts/bowlby-one-sc-v12-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('../fonts/bowlby-one-sc-v12-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('../fonts/bowlby-one-sc-v12-latin-regular.svg#BowlbyOneSC')
+      format('svg'); /* Legacy iOS */
+}
 
 body {
   font-size: 120%;
@@ -11,8 +30,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bowlby One SC', cursive;
   color: var(--color-light-headings);
+  font-weight: 400;
+  font-variant-caps: small-caps;
+  letter-spacing: 1px;
 }
 
 @media (prefers-color-scheme: dark) {

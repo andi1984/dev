@@ -8,6 +8,15 @@ header {
   display: inline-block;
 }
 
+/* We have to overwrite some of the heading default stylings*/
+.masthead h1 {
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: normal;
+  font-variant-caps: normal;
+}
+
 @media (min-aspect-ratio: 11/10) and (min-height: 400px) {
   /* Page is wider than it is tall */
   .triangle {

@@ -12,8 +12,6 @@ export default () => {
               max-width: 100%;
               animation: typing 2s steps(${numChars}), blink 0.5s step-end infinite alternate;
               border-right: 3px solid;
-              font-family: monospace;
-              font-size: 2em;
               white-space: nowrap;
               overflow: hidden;
           `
@@ -24,11 +22,11 @@ export default () => {
   };
 
   let prevOnLoad;
-  if(typeof window.onload === 'function') {
+  if (typeof window.onload === 'function') {
     prevOnLoad = window.onload;
   }
   window.onload = () => {
-    if(!!prevOnLoad) {
+    if (!!prevOnLoad) {
       prevOnLoad();
     }
 
