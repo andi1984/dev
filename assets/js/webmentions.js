@@ -2,31 +2,30 @@ import { h, options, render, Fragment } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
 function Webmention({ mention }) {
-  //1. Find out the "type" of webmention from Brid.gy service cf. https://github.com/snarfed/bridgy/blob/f86503113e6d6a33552edc121b65c56b864353d8/blog_webmention.py#L203)
-  if (mention['in-reply-to']) {
-    // Comment
-    return (
-      <a href={mention.url} target="_blank">
-        {mention.author.name} commented: "{mention.content.text}"
-      </a>
-    );
+  // Switch case based on https://github.com/snarfed/bridgy/blob/f86503113e6d6a33552edc121b65c56b864353d8/blog_webmention.py#L203
+  switch (mention['wm-property']) {
+    case 'in-reply-to':
+      // comment
+      return (
+        <a href={mention.url} target="_blank">
+          {mention.author.name} commented: "{mention.content.text}"
+        </a>
+      );
+    case 'like-of':
+      // Like
+      return (
+        <a href={mention.author.url} target="_blank">
+          {mention.author.name} liked this!
+        </a>
+      );
+    default:
+      // Repost case
+      return (
+        <a href={mention.url} target="_blank">
+          {mention.author.name} reposted this!
+        </a>
+      );
   }
-
-  if (mention['like-of']) {
-    // Like
-    return (
-      <a href={mention.author.url} target="_blank">
-        {mention.author.name} liked this!
-      </a>
-    );
-  }
-
-  // Repost case
-  return (
-    <a href={mention.url} target="_blank">
-      {mention.author.name} reposted this!
-    </a>
-  );
 }
 
 export default function () {
