@@ -5,7 +5,7 @@ import Quote from './quote';
 import Sentry from './sentry';
 import Webmentions from './webmentions';
 
-//Sentry();
+Sentry();
 Prism();
 Faces();
 Typing();
