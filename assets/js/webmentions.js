@@ -2,7 +2,6 @@ import { h, options, render, Fragment } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
 function Webmention({ mention }) {
-  let type = 'repost';
   //1. Find out the "type" of webmention from Brid.gy service cf. https://github.com/snarfed/bridgy/blob/f86503113e6d6a33552edc121b65c56b864353d8/blog_webmention.py#L203)
   if (mention['in-reply-to']) {
     // Comment
