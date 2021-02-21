@@ -53,7 +53,7 @@ export default function () {
 
     return (
       <>
-        <h2>Webmentions</h2>(
+        <h2>Webmentions</h2>
         <ol>
           {mentions.map((mention) => (
             <li>
