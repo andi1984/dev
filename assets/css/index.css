@@ -8,6 +8,11 @@ main {
   margin-right: 8px;
 }
 
+img {
+  width: auto;
+  max-width: 100%;
+}
+
 @import './colors.css';
 @import './theme/index.css';
 @import './typo/index.css';
