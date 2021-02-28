@@ -34,7 +34,7 @@
   "dependencies": {
     "@andi1984/back2roots": "^0.9.1",
     "@babel/runtime": "^7.13.8",
-    "@sentry/browser": "^5.30.0",
+    "@sentry/browser": "^6.2.0",
     "@sentry/tracing": "^5.30.0",
     "autoprefixer": "^9.8.6",
     "lodash": "^4.17.21",
