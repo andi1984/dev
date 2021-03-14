@@ -8,6 +8,10 @@
   font-size: 1.3rem;
 }
 
+.list--small {
+  font-size: 0.9rem;
+}
+
 .list__item--update::before {
   content: 'Update';
   background-color: var(--background-light-tag);

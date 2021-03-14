@@ -7,10 +7,16 @@
 
 {% block body %}
 	{% include "partials/_header.twig" %}
-	<main>
-		{% block main_content %}
-			{{content}}
-		{% endblock %}
-	</main>
+	{% block pre_content %}{% endblock %}
+	<div class="flex-wrapper">
+		<main>
+			{% block main_content %}
+				{{content}}
+			{% endblock %}
+		</main>
+		<aside>
+			{% block aside_content %}{% endblock %}
+		</aside>
+	</div>
 	{% include "partials/_footer.twig" %}
 {% endblock %}

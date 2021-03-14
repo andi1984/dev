@@ -1,10 +1,20 @@
 {% extends "./main.twig" %}
+{% block pre_content %}
+	<section id="quote"></section>
+{% endblock %}
 
 {% block main_content %}
-	<section id="quote"></section>
 	{{content}}
-	<h2>Blogposts</h2>
-	{% include "partials/_blogposts.twig" %}
-	<h2>Notes</h2>
-	{% include "partials/_notes.twig" %}
+	<section>
+		<h2>Blogposts</h2>
+		{% include "partials/_blogposts.twig" %}
+	</section>
+	<section>
+		<h2>Notes</h2>
+		{% include "partials/_notes.twig" %}
+	</section>
+{% endblock %}
+
+{% block aside_content %}
+	<section id="rss"></section>
 {% endblock %}

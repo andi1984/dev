@@ -24,6 +24,7 @@ export default {
     json(),
     injectProcessEnv({
       sentryDSN: process.env.SENTRY_DSN,
+      rssAPIEndpoint: process.env.RSS_API_ENDPOINT,
     }),
   ],
 };

@@ -3,9 +3,38 @@ body {
   margin: 0;
 }
 
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .flex-wrapper {
+    flex-direction: row;
+    align-items: space-between
+  }
+}
+
 main {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+aside:empty {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  main {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 75%;
+  }
+  aside {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 25%;
+  }
 }
 
 img {
