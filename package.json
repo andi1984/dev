@@ -33,7 +33,7 @@
   "private": true,
   "dependencies": {
     "@andi1984/back2roots": "^0.9.1",
-    "@babel/runtime": "^7.13.8",
+    "@babel/runtime": "^7.13.10",
     "@sentry/browser": "^6.2.2",
     "@sentry/tracing": "^6.2.3",
     "autoprefixer": "^9.8.6",
