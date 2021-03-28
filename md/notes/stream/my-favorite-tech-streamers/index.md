@@ -2,6 +2,7 @@
 date: 2021-03-27 14:10:23
 title: Twitch Tech Streamer
 template: blogpost.twig
+devto: https://dev.to/andi1984/twitch-tech-streamers-23l0
 ---
 
 I stopped watching TV nearly five years ago in favor of Youtube and Twitch content that I can choose myself.
