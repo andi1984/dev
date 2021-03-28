@@ -2,10 +2,11 @@
 date: 2021-02-28T15:02:20
 title: Streaming
 template: blogpost.twig
-description: Late 2020 I started my streaming and YT journey. In this blogpost I talk about my first experience with it.
+description: Late 2020, I started my streaming and YT journey. In this blogpost I talk about my first experience with it.
+devto: https://dev.to/andi1984/streaming-o50
 ---
 
-End of 2020 I started [streaming](https://twitch.tv/andi1984) and [putting videos on YT](https://www.youtube.com/channel/UC9yhSlXfpjleDuJV1AGViIg) as an experiment.
+End of 2020, I started [streaming](https://twitch.tv/andi1984) and [putting videos on YT](https://www.youtube.com/channel/UC9yhSlXfpjleDuJV1AGViIg) as an experiment.
 
 I wanted to find out about the workflows behind it and whether it would help to promote my personal brand.
 
