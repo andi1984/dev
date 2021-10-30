@@ -2,7 +2,7 @@
 {% set description = (content|striptags|length > 160 ? content|striptags|slice(0, 160) ~ '...' : content|striptags)|trim %}
 <meta name="title" content="{{ title }}">
 <meta
-name="description" content="{{description}}">
+name="description" content="{{meta.description ? meta.description : description}}">
 
 <!-- Webmentions -->
 <link rel="webmention" href="https://webmention.io/www.andi1984.dev/webmention"/>
@@ -15,14 +15,14 @@ rel="pingback" href="https://webmention.io/www.andi1984.dev/xmlrpc"/>
 <meta property="og:title" content="{{title}}">
 <meta property="og:url" content="{{url.href}}">
 <meta
-property="og:description" content="{{description}}">
+property="og:description" content="{{meta.description ? meta.description : description}}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary">
 <meta property="twitter:url" content="{{url.href}}">
 <meta property="twitter:title" content="{{title}}">
 <meta
-property="twitter:description" content="{{description}}">
+property="twitter:description" content="{{meta.description ? meta.description : description}}">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
