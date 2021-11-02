@@ -6,6 +6,8 @@ import Sentry from './sentry';
 import Webmentions from './webmentions';
 import Rss from './rss';
 
+import '../css/index.css';
+
 Sentry();
 Prism();
 Faces();

@@ -1,0 +1,24 @@
+@media print {
+  @page {
+    @bottom-right {
+      content: element(pageFooter);
+    }
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  body,
+  html {
+    background-color: rgb(0, 68, 255) !important;
+    font-size: 4cm;
+  }
+
+  .footer {
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

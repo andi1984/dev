@@ -20,7 +20,7 @@ export default {
     babel({ babelHelpers: 'bundled' }),
     commonjs(),
     nodeResolve(),
-    postcss({ plugins: [] }),
+    postcss({ plugins: [], extract: 'bundle.css' }),
     json(),
     injectProcessEnv({
       sentryDSN: process.env.SENTRY_DSN,
