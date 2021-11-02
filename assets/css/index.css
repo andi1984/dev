@@ -1,3 +1,13 @@
+@import './colors.css';
+@import './theme/index.css';
+@import './typo/index.css';
+@import './links/index.css';
+@import './list/index.css';
+@import './cards/index.css';
+@import './header/index.css';
+@import './post/index.css';
+@import './prism.css';
+
 html,
 body {
   margin: 0;
@@ -11,7 +21,7 @@ body {
 @media (min-width: 800px) {
   .flex-wrapper {
     flex-direction: row;
-    align-items: space-between
+    align-items: space-between;
   }
 }
 
@@ -41,16 +51,6 @@ img {
   width: auto;
   max-width: 100%;
 }
-
-@import './colors.css';
-@import './theme/index.css';
-@import './typo/index.css';
-@import './links/index.css';
-@import './list/index.css';
-@import './cards/index.css';
-@import './header/index.css';
-@import './post/index.css';
-@import './prism.css';
 
 @keyframes typing {
   from {
