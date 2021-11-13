@@ -2,6 +2,7 @@
 title: My Neovim journey
 date: 2021-10-10T11:18:52
 template: blogpost.twig
+devto: https://dev.to/andi1984/my-neovim-journey-3on6
 ---
 
 Do you know [Vim](https://www.vim.org/)? This lightweight, but
