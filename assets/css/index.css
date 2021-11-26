@@ -8,6 +8,12 @@
 @import './post/index.css';
 @import './prism.css';
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -39,6 +45,8 @@ aside:empty {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 75%;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   aside {
     flex-grow: 0;
