@@ -1,16 +1,16 @@
-<ol class="list list--big">
+<ol class="list list--big list--grid">
 	{% for site in sites %}
 		{% if 'posts/' in site.url.pathname %}
 			<li class="list__item {% if site.meta.update %}list__item--update{% endif %}" data-date="{% if site.meta.update %}{{site.meta.update|date("m/d/Y")}}{% else %}{{site.meta.date|date("m/d/Y")}}{% endif %}">
 				<a class="list__item__title" href="{{site.url}}">{{site.title}}</a>
-                {% if site.meta.description %}
-                <details class="list__item__description" open>
-                        <summary>
-                                Description
-                        </summary>
-                        <p>{{site.meta.description}}</p>
-                </details>
-                {% endif %}
+				{% if site.meta.description %}
+					<details class="list__item__description" open>
+						<summary>
+							Description
+						</summary>
+						<p>{{site.meta.description}}</p>
+					</details>
+				{% endif %}
 			</li>
 		{% endif %}
 	{% endfor %}
