@@ -36,7 +36,7 @@
     "@sentry/tracing": "^6.15.0",
     "autoprefixer": "^10.4.0",
     "lodash": "^4.17.21",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.17",
     "postcss-cli": "^9.0.1",
     "postcss-import": "^14.0.2",
     "preact": "^10.6.1",
