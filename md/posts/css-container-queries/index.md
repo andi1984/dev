@@ -2,6 +2,7 @@
 date: 2023-08-09T13:20:15+01:00
 title: Container Queries in CSS: The Cool New Kid on the Block
 template: blogpost.twig
+devto: https://dev.to/andi1984/container-queries-in-css-the-cool-new-kid-on-the-block-3kck
 ---
 
 Hey there, web design fans! Have you ever pulled your hair out trying to make a design look great on every screen size? Well, guess what? The web design world is abuzz with something new and exciting, and it's about to make your life a whole lot easier. Say hello to container queries in CSS!

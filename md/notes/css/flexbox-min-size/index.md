@@ -2,6 +2,7 @@
 date: 2020-12-12T12:18:31
 title: Automatic Minimum Size of Flex Items
 template: blogpost.twig
+devto: https://dev.to/andi1984/automatic-minimum-size-of-flex-items-20af
 ---
 
 Today I would like to talk about flexbox and the automatic minimum size of flex items, means how the flexbox algorithm is internally calculating the minium size of flex child elements aka. flex items.
